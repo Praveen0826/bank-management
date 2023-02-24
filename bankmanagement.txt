@@ -1,0 +1,58 @@
+package placement;
+ import java.util.Scanner;
+public class bankdetail {
+
+	public static void main(String[] args) {
+		System.out.println("WELCOME TO PRAVEEN BANK");
+		
+	 System.out.println("ENTER THE PIN NUMBER");
+	 Scanner getitem= new Scanner(System.in);
+	 int name=getitem.nextInt();	
+     if(name==1234){
+    	 System.out.println("LOGIN SUCESSFUL");
+     }
+     else {
+    	 System.out.println("INVALID PIN");
+    	 }
+     int balance=10000,withdraw,deposit;
+     
+     while(true)
+     {
+     System.out.println("CASH WITHDRAWAL");
+     System.out.println("BALANCE ENQUIRY");
+     System.out.println("DEPOSIT");
+     System.out.println("EXIT");
+     System.out.println("CHOOSE THE OPERATION YOU WANT TO PERFORM");
+     int choice=getitem.nextInt();
+     switch(choice)
+     {
+     case 1:
+    	 System.out.println("ENTER THE MONEY TO BE WITHDRAWEL");
+    	 withdraw=getitem.nextInt();
+    	 if(balance>=withdraw)
+    	 {
+    		 balance=balance-withdraw;
+    	 System.out.println("PLEASE COLLECT YOUR CASH");
+     }
+    	 else
+    	 {
+    		 System.out.println("INSUFFICIENT CASH");
+    	 }
+    	 System.out.println("");
+    	 break;
+     case 2:
+     System.out.println("ENTER THE AMOUNT TO BE DEBITED");
+     deposit=getitem.nextInt();
+     balance=balance+deposit;
+     System.out.println("THE AMOUNT CAN BE DEBITED SUCCESSFULLY");
+     break;
+     case 3:
+    	 System.out.println("balance"+balance);
+    	 break;
+     case 4:
+    	 System.exit(0);
+     }
+     }
+     
+}
+}
